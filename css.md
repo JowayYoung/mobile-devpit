@@ -61,7 +61,7 @@ html {
     /* 自定义样式 */
 }
 /* 横屏 */
-@media all and (orientation: portrait) {
+@media all and (orientation: landscape) {
     /* 自定义样式 */
 }
 ```
