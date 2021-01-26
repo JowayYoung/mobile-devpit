@@ -23,7 +23,7 @@ window.addEventListener("resize", () => AutoResponse());
 
 ```css
 html {
-	font-size: calc(100vw / 7.5);
+    font-size: calc(100vw / 7.5);
 }
 ```
 
@@ -31,9 +31,9 @@ html {
 
 ```css
 @media screen and (max-width: 1024px) {
-	html {
-		font-size: calc(100vw / 7.5);
-	}
+    html {
+        font-size: calc(100vw / 7.5);
+    }
 }
 ```
 
@@ -45,9 +45,9 @@ html {
 
 ```css
 .elem {
-	width: 1rem;
-	height: 1rem;
-	background: url("pig.jpg") no-repeat center/100% 100%;
+    width: 1rem;
+    height: 1rem;
+    background: url("pig.jpg") no-repeat center/100% 100%;
 }
 ```
 
@@ -58,11 +58,11 @@ html {
 ```css
 /* 竖屏 */
 @media all and (orientation: portrait) {
-	/* 自定义样式 */
+    /* 自定义样式 */
 }
 /* 横屏 */
 @media all and (orientation: portrait) {
-	/* 自定义样式 */
+    /* 自定义样式 */
 }
 ```
 
@@ -72,10 +72,10 @@ html {
 
 ```css
 body {
-	-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 .elem {
-	overflow: auto;
+    overflow: auto;
 }
 ```
 
@@ -87,7 +87,7 @@ body {
 
 ```css
 .elem {
-	overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 ```
 
@@ -99,7 +99,7 @@ body {
 
 ```css
 body {
-	padding-right: calc(100vw - 100%);
+    padding-right: calc(100vw - 100%);
 }
 ```
 
@@ -111,9 +111,9 @@ body {
 
 ```css
 * {
-	/* pointer-events: none; */ /* 微信浏览器还需附加该属性才有效 */
-	-webkit-touch-callout: none;
-	user-select: none; /* 禁止长按选择文字 */
+    /* pointer-events: none; */ /* 微信浏览器还需附加该属性才有效 */
+    user-select: none; /* 禁止长按选择文字 */
+    -webkit-touch-callout: none;
 }
 ```
 
@@ -122,7 +122,7 @@ body {
 ```css
 input,
 textarea {
-	user-select: auto;
+    user-select: auto;
 }
 ```
 
@@ -132,7 +132,7 @@ textarea {
 
 ```css
 * {
-	text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 ```
 
@@ -142,7 +142,7 @@ textarea {
 
 ```css
 * {
-	-webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 ```
 
@@ -152,9 +152,9 @@ textarea {
 
 ```css
 .elem {
-	perspective: 1000;
-	backface-visibility: hidden;
-	transform-style: preserve-3d;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 ```
 
@@ -167,8 +167,8 @@ button,
 input,
 select,
 textarea {
-	appearance: none;
-	/* 自定义样式 */
+    appearance: none;
+    /* 自定义样式 */
 }
 ```
 
@@ -182,16 +182,16 @@ textarea {
 
 ```css
 ::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
-	background-color: transparent;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
 }
 ::-webkit-scrollbar-track {
-	background-color: transparent;
+    background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-	border-radius: 3px;
-	background-image: linear-gradient(135deg, #09f, #3c9);
+    border-radius: 3px;
+    background-image: linear-gradient(135deg, #09f, #3c9);
 }
 ```
 
@@ -201,7 +201,7 @@ textarea {
 
 ```css
 input::-webkit-input-placeholder {
-	color: #66f;
+    color: #66f;
 }
 ```
 
@@ -211,7 +211,7 @@ input::-webkit-input-placeholder {
 
 ```css
 input {
-	line-height: normal;
+    line-height: normal;
 }
 ```
 
@@ -221,7 +221,7 @@ input {
 
 ```css
 select option {
-	direction: rtl;
+    direction: rtl;
 }
 ```
 
@@ -231,7 +231,7 @@ select option {
 
 ```css
 .elem {
-	cursor: pointer;
+    cursor: pointer;
 }
 ```
 
@@ -241,7 +241,7 @@ select option {
 
 ```css
 * {
-	white-space: pre-line;
+    white-space: pre-line;
 }
 ```
 
@@ -251,8 +251,8 @@ select option {
 
 ```css
 .elem {
-	transform: translate3d(0, 0, 0);
-	/* transform: translateZ(0); */
+    transform: translate3d(0, 0, 0);
+    /* transform: translateZ(0); */
 }
 ```
 
@@ -262,20 +262,20 @@ select option {
 
 ```scss
 .elem {
-	position: relative;
-	width: 200px;
-	height: 80px;
-	&::after {
-		position: absolute;
-		left: 0;
-		top: 0;
-		border: 1px solid #f66;
-		width: 200%;
-		height: 200%;
-		content: "";
-		transform: scale(.5);
-		transform-origin: left top;
-	}
+    position: relative;
+    width: 200px;
+    height: 80px;
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #f66;
+        width: 200%;
+        height: 200%;
+        content: "";
+        transform: scale(.5);
+        transform-origin: left top;
+    }
 }
 ```
 
@@ -285,20 +285,20 @@ select option {
 
 ```scss
 .elem {
-	width: 400px;
-	line-height: 30px;
-	font-size: 20px;
-	&.sl-ellipsis {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	&.ml-ellipsis {
-		display: -webkit-box;
-		overflow: hidden;
-		-webkit-line-clamp: 3;
-		text-overflow: ellipsis;
-		-webkit-box-orient: vertical;
-	}
+    width: 400px;
+    line-height: 30px;
+    font-size: 20px;
+    &.sl-ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &.ml-ellipsis {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
 }
 ```
