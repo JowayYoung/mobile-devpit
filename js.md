@@ -8,7 +8,7 @@
 
 在前端领域里最早解决点击穿透是`jQuery时代`的`zepto`，估计现在大部分同学都未使用过`zepto`，其实它就是移动端版本的`jquery`。`zepto`封装`tap事件`能有效地解决点击穿透，通过监听`document`上的`touch事件`完成`tap事件`的模拟，并将`tap事件`冒泡到`document`上触发。
 
-在`移动端浏览器`上不使用`click事件`而使用`touch事件`是因为`click事件`有着明显的延迟，后续又出现`fastclick`。该解决方案监听用户是否做了双击操作，所以还是可直接使用`click事件`，而点击穿透就交给该`fastclick`自动判断。更多`fastclick`原理可自行百度，在此不作过多介绍。
+在`移动端浏览器`上不使用`click事件`而使用`touch事件`是因为`click事件`有着明显的延迟，后续又出现`fastclick`。该解决方案监听用户是否做了双击操作，可正常使用`click事件`，而点击穿透就交给`fastclick`自动判断。更多`fastclick`原理可自行百度，在此不作过多介绍。
 
 [fastclick](https://github.com/ftlabs/fastclick)有现成的`NPM包`，可直接安装到项目里。引入`fastclick`可使用`click事件`代替`tap事件`，接入方式极其简单。
 
@@ -36,9 +36,9 @@ FastClick.attach(document.body);
 
 ```css
 body.static {
-	position: fixed;
-	left: 0;
-	width: 100%;
+    position: fixed;
+    left: 0;
+    width: 100%;
 }
 ```
 
@@ -96,7 +96,7 @@ new Date("2019-03-31 21:30:00"); // Invalid Date
 
 ```js
 const date = "2019-03-31 21:30:00";
-new Date(date.replace(/\-/g, "-"));
+new Date(date.replace(/\-/g, "/"));
 ```
 
 ### 修复高度坍塌
@@ -184,7 +184,7 @@ imgs.forEach(v => observer.observe(v));
 const bottom = document.getElementById("bottom");
 const observer = new IntersectionObserver(nodes => {
     const tgt = nodes[0]; // 反正只有一个
-    if (item.isIntersecting) {
+    if (tgt.isIntersecting) {
         console.log("已到底部，请求接口");
         // 执行接口请求代码
     }
@@ -200,7 +200,7 @@ bottom.observe(bottom);
 - [x] 使用`<svg>`渲染
 - [x] 使用`<canvas>`渲染
 
-经过网易MTL测试的数据显示，大部分`移动端浏览器`只能识别`<img>`渲染的二维码，为了让全部`移动端浏览器`都能识别二维码，那只能使用`<img>`渲染二维码了。若使用`SVG`和`Canvas`的方式生成二维码，那就想方设法把二维码数据转换成`Base64`再赋值到`<img>`的`src`上。
+从网易MTL的测试数据得知，大部分`移动端浏览器`只能识别`<img>`渲染的二维码，为了让全部`移动端浏览器`都能识别二维码，那只能使用`<img>`渲染二维码了。若使用`SVG`和`Canvas`的方式生成二维码，那就想方设法把二维码数据转换成`Base64`再赋值到`<img>`的`src`上。
 
 一个页面可能存在多个二维码，若长按二维码只能识别最后一个，那只能控制每个页面只存在一个二维码。
 
